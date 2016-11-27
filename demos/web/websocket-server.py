@@ -50,6 +50,8 @@ import matplotlib.cm as cm
 
 import openface
 
+import time
+
 modelDir = os.path.join(fileDir, '..', '..', 'models')
 dlibModelDir = os.path.join(modelDir, 'dlib')
 openfaceModelDir = os.path.join(modelDir, 'openface')
@@ -264,12 +266,14 @@ class OpenFaceServerProtocol(WebSocketServerProtocol):
         # if cv2.waitKey(1) & 0xFF == ord('q'):
         #     return
 
+        start_time = time.time()
         identities = []
         # bbs = align.getAllFaceBoundingBoxes(rgbFrame)
         bb = align.getLargestFaceBoundingBox(rgbFrame)
         bbs = [bb] if bb is not None else []
         for bb in bbs:
             # print(len(bbs))
+
             landmarks = align.findLandmarks(rgbFrame, bb)
             alignedFace = align.align(args.imgDim, rgbFrame, bb,
                                       landmarks=landmarks,
@@ -352,6 +356,9 @@ class OpenFaceServerProtocol(WebSocketServerProtocol):
             }
             plt.close()
             self.sendMessage(json.dumps(msg))
+
+        end_time = time.time()
+        print("---Reconocimiento en  %s seconds ---" % (end_time - start_time))
 
 if __name__ == '__main__':
     log.startLogging(sys.stdout)
