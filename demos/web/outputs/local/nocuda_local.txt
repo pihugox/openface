@@ -1,0 +1,235 @@
+
+Starting the HTTP server on port 8000
+and the WebSocket server on port 9000.
+
+Access the demo through the HTTP server in your browser.
+If you're running on the same computer outside of Docker, use http://localhost:8000
+If you're running on the same computer with Docker, find the IP
+address of the Docker container and use http://<docker-ip>:8000.
+If you're running on a remote computer, find the IP address
+and use http://<remote-ip>:8000.
+
+WARNING: Chromium refuses to connect to the insecure WebSocket server
+if you are running a remote or Docker deployment.
+We have posted a workaround to forward traffic through localhost
+using ncat at http://cmusatyalab.github.io/openface/demo-1-web/.
+Track our progress on fixing this at:
+https://github.com/cmusatyalab/openface/issues/75.
+
+
+WebSocket Server: Logging to '/tmp/openface.websocket.log'
+
+2016-12-02 03:21:06-0500 [-] Log opened.
+2016-12-02 03:21:06-0500 [-] WebSocketServerFactory starting on 9000
+2016-12-02 03:21:06-0500 [-] Starting factory <autobahn.twisted.websocket.WebSocketServerFactory object at 0x7fa85c97e4d0>
+2016-12-02 03:21:08-0500 [-] Client connecting: tcp4:192.168.1.38:57898
+2016-12-02 03:21:08-0500 [-] WebSocket connection open.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received NULL message of length 15.
+2016-12-02 03:21:08-0500 [-] Received ALL_STATE message of length 61.
+2016-12-02 03:21:08-0500 [-] + Training SVM on 0 labeled images.
+2016-12-02 03:21:11-0500 [-] Received FRAME message of length 3438.
+2016-12-02 03:21:11-0500 [-] ---Face Detection   0.12762093544 seconds ---
+2016-12-02 03:21:11-0500 [-] Received FRAME message of length 5222.
+2016-12-02 03:21:11-0500 [-] ---Face Detection   0.12529706955 seconds ---
+2016-12-02 03:21:11-0500 [-] ---Face Align  0.00304388999939 seconds ---
+2016-12-02 03:21:11-0500 [-] ---Reconocimiento en  0.0584480762482 seconds ---
+2016-12-02 03:21:12-0500 [-] Received FRAME message of length 5278.
+2016-12-02 03:21:12-0500 [-] ---Face Detection   0.124597072601 seconds ---
+2016-12-02 03:21:12-0500 [-] ---Face Align  0.00319790840149 seconds ---
+2016-12-02 03:21:12-0500 [-] ---Reconocimiento en  0.0515270233154 seconds ---
+2016-12-02 03:21:12-0500 [-] Received FRAME message of length 5294.
+2016-12-02 03:21:12-0500 [-] ---Face Detection   0.125670909882 seconds ---
+2016-12-02 03:21:12-0500 [-] ---Face Align  0.00317597389221 seconds ---
+2016-12-02 03:21:12-0500 [-] ---Reconocimiento en  0.0558469295502 seconds ---
+2016-12-02 03:21:13-0500 [-] Received FRAME message of length 5294.
+2016-12-02 03:21:13-0500 [-] ---Face Detection   0.125023126602 seconds ---
+2016-12-02 03:21:13-0500 [-] ---Face Align  0.0029501914978 seconds ---
+2016-12-02 03:21:13-0500 [-] ---Reconocimiento en  0.0483829975128 seconds ---
+2016-12-02 03:21:13-0500 [-] Received FRAME message of length 5278.
+2016-12-02 03:21:13-0500 [-] ---Face Detection   0.125781059265 seconds ---
+2016-12-02 03:21:13-0500 [-] ---Face Align  0.00321793556213 seconds ---
+2016-12-02 03:21:13-0500 [-] ---Reconocimiento en  0.0559878349304 seconds ---
+2016-12-02 03:21:14-0500 [-] Received FRAME message of length 5278.
+2016-12-02 03:21:14-0500 [-] ---Face Detection   0.126713037491 seconds ---
+2016-12-02 03:21:14-0500 [-] ---Face Align  0.00307202339172 seconds ---
+2016-12-02 03:21:14-0500 [-] ---Reconocimiento en  0.0520539283752 seconds ---
+2016-12-02 03:21:14-0500 [-] Received FRAME message of length 5518.
+2016-12-02 03:21:14-0500 [-] ---Face Detection   0.125830888748 seconds ---
+2016-12-02 03:21:14-0500 [-] ---Face Align  0.00355100631714 seconds ---
+2016-12-02 03:21:14-0500 [-] ---Reconocimiento en  0.045471906662 seconds ---
+2016-12-02 03:21:15-0500 [-] Received FRAME message of length 5574.
+2016-12-02 03:21:15-0500 [-] ---Face Detection   0.127110958099 seconds ---
+2016-12-02 03:21:15-0500 [-] ---Face Align  0.00332999229431 seconds ---
+2016-12-02 03:21:15-0500 [-] ---Reconocimiento en  0.053503036499 seconds ---
+2016-12-02 03:21:15-0500 [-] Received FRAME message of length 5658.
+2016-12-02 03:21:15-0500 [-] ---Face Detection   0.126822948456 seconds ---
+2016-12-02 03:21:15-0500 [-] ---Face Align  0.0029821395874 seconds ---
+2016-12-02 03:21:15-0500 [-] ---Reconocimiento en  0.050696849823 seconds ---
+2016-12-02 03:21:16-0500 [-] Received FRAME message of length 5586.
+2016-12-02 03:21:16-0500 [-] ---Face Detection   0.125140190125 seconds ---
+2016-12-02 03:21:16-0500 [-] ---Face Align  0.00310611724854 seconds ---
+2016-12-02 03:21:16-0500 [-] ---Reconocimiento en  0.0541582107544 seconds ---
+2016-12-02 03:21:16-0500 [-] Received ADD_PERSON message of length 34.
+2016-12-02 03:21:16-0500 [-] ['hugo']
+2016-12-02 03:21:16-0500 [-] Received FRAME message of length 5633.
+2016-12-02 03:21:16-0500 [-] ---Face Detection   0.125689983368 seconds ---
+2016-12-02 03:21:16-0500 [-] ---Face Align  0.0029730796814 seconds ---
+2016-12-02 03:21:17-0500 [-] ---Reconocimiento en  0.0510580539703 seconds ---
+2016-12-02 03:21:17-0500 [-] Received FRAME message of length 5625.
+2016-12-02 03:21:17-0500 [-] ---Face Detection   0.12548995018 seconds ---
+2016-12-02 03:21:17-0500 [-] ---Face Align  0.00299406051636 seconds ---
+2016-12-02 03:21:17-0500 [-] ---Reconocimiento en  0.0544118881226 seconds ---
+2016-12-02 03:21:17-0500 [-] Received FRAME message of length 5709.
+2016-12-02 03:21:18-0500 [-] ---Face Detection   0.129628896713 seconds ---
+2016-12-02 03:21:18-0500 [-] ---Face Align  0.0029718875885 seconds ---
+2016-12-02 03:21:18-0500 [-] ---Reconocimiento en  0.0561420917511 seconds ---
+2016-12-02 03:21:18-0500 [-] Received TRAINING message of length 30.
+2016-12-02 03:21:18-0500 [-] Received FRAME message of length 5681.
+2016-12-02 03:21:18-0500 [-] ---Face Detection   0.127215147018 seconds ---
+2016-12-02 03:21:18-0500 [-] ---Face Align  0.00299215316772 seconds ---
+2016-12-02 03:21:18-0500 [-] ---Reconocimiento en  0.105406045914 seconds ---
+2016-12-02 03:21:18-0500 [-] Received FRAME message of length 5669.
+2016-12-02 03:21:19-0500 [-] ---Face Detection   0.125742912292 seconds ---
+2016-12-02 03:21:19-0500 [-] ---Face Align  0.00305700302124 seconds ---
+2016-12-02 03:21:19-0500 [-] ---Reconocimiento en  0.113567113876 seconds ---
+2016-12-02 03:21:19-0500 [-] Received FRAME message of length 5673.
+2016-12-02 03:21:19-0500 [-] ---Face Detection   0.12523317337 seconds ---
+2016-12-02 03:21:19-0500 [-] ---Face Align  0.00298190116882 seconds ---
+2016-12-02 03:21:19-0500 [-] ---Reconocimiento en  0.10822892189 seconds ---
+2016-12-02 03:21:20-0500 [-] Received FRAME message of length 5641.
+2016-12-02 03:21:20-0500 [-] ---Face Detection   0.125422954559 seconds ---
+2016-12-02 03:21:20-0500 [-] ---Face Align  0.00307703018188 seconds ---
+2016-12-02 03:21:20-0500 [-] Received FRAME message of length 5649.
+2016-12-02 03:21:20-0500 [-] ---Face Detection   0.125393152237 seconds ---
+2016-12-02 03:21:20-0500 [-] ---Face Align  0.00296378135681 seconds ---
+2016-12-02 03:21:20-0500 [-] ---Reconocimiento en  0.107371091843 seconds ---
+2016-12-02 03:21:20-0500 [-] Received FRAME message of length 5665.
+2016-12-02 03:21:20-0500 [-] ---Face Detection   0.125341892242 seconds ---
+2016-12-02 03:21:20-0500 [-] ---Face Align  0.00297093391418 seconds ---
+2016-12-02 03:21:21-0500 [-] Received FRAME message of length 5673.
+2016-12-02 03:21:21-0500 [-] ---Face Detection   0.128561019897 seconds ---
+2016-12-02 03:21:21-0500 [-] ---Face Align  0.00309991836548 seconds ---
+2016-12-02 03:21:21-0500 [-] ---Reconocimiento en  0.106496810913 seconds ---
+2016-12-02 03:21:21-0500 [-] Received FRAME message of length 5653.
+2016-12-02 03:21:21-0500 [-] ---Face Detection   0.125380039215 seconds ---
+2016-12-02 03:21:21-0500 [-] ---Face Align  0.003014087677 seconds ---
+2016-12-02 03:21:21-0500 [-] ---Reconocimiento en  0.112069129944 seconds ---
+2016-12-02 03:21:22-0500 [-] Received FRAME message of length 5649.
+2016-12-02 03:21:22-0500 [-] ---Face Detection   0.125782966614 seconds ---
+2016-12-02 03:21:22-0500 [-] ---Face Align  0.00316500663757 seconds ---
+2016-12-02 03:21:22-0500 [-] ---Reconocimiento en  0.107917070389 seconds ---
+2016-12-02 03:21:22-0500 [-] Received FRAME message of length 5645.
+2016-12-02 03:21:22-0500 [-] ---Face Detection   0.124418973923 seconds ---
+2016-12-02 03:21:22-0500 [-] ---Face Align  0.00350999832153 seconds ---
+2016-12-02 03:21:22-0500 [-] ---Reconocimiento en  0.0975179672241 seconds ---
+2016-12-02 03:21:23-0500 [-] Received FRAME message of length 5621.
+2016-12-02 03:21:23-0500 [-] ---Face Detection   0.127686023712 seconds ---
+2016-12-02 03:21:23-0500 [-] ---Face Align  0.00296783447266 seconds ---
+2016-12-02 03:21:23-0500 [-] ---Reconocimiento en  0.111037015915 seconds ---
+2016-12-02 03:21:23-0500 [-] Received FRAME message of length 5677.
+2016-12-02 03:21:23-0500 [-] ---Face Detection   0.126282930374 seconds ---
+2016-12-02 03:21:23-0500 [-] ---Face Align  0.00295400619507 seconds ---
+2016-12-02 03:21:24-0500 [-] ---Reconocimiento en  0.110654830933 seconds ---
+2016-12-02 03:21:24-0500 [-] Received FRAME message of length 5637.
+2016-12-02 03:21:24-0500 [-] ---Face Detection   0.129026889801 seconds ---
+2016-12-02 03:21:24-0500 [-] ---Face Align  0.0030210018158 seconds ---
+2016-12-02 03:21:24-0500 [-] Received FRAME message of length 5601.
+2016-12-02 03:21:24-0500 [-] ---Face Detection   0.126129865646 seconds ---
+2016-12-02 03:21:24-0500 [-] ---Face Align  0.00296902656555 seconds ---
+2016-12-02 03:21:24-0500 [-] ---Reconocimiento en  0.106486797333 seconds ---
+2016-12-02 03:21:25-0500 [-] Received FRAME message of length 5629.
+2016-12-02 03:21:25-0500 [-] ---Face Detection   0.127024173737 seconds ---
+2016-12-02 03:21:25-0500 [-] ---Face Align  0.00299692153931 seconds ---
+2016-12-02 03:21:25-0500 [-] Received FRAME message of length 5645.
+2016-12-02 03:21:25-0500 [-] ---Face Detection   0.124787092209 seconds ---
+2016-12-02 03:21:25-0500 [-] ---Face Align  0.00304913520813 seconds ---
+2016-12-02 03:21:25-0500 [-] ---Reconocimiento en  0.109241962433 seconds ---
+2016-12-02 03:21:25-0500 [-] Received FRAME message of length 5637.
+2016-12-02 03:21:26-0500 [-] ---Face Detection   0.124162912369 seconds ---
+2016-12-02 03:21:26-0500 [-] ---Face Align  0.00320601463318 seconds ---
+2016-12-02 03:21:26-0500 [-] ---Reconocimiento en  0.108647823334 seconds ---
+2016-12-02 03:21:26-0500 [-] Received TRAINING message of length 31.
+2016-12-02 03:21:26-0500 [-] + Training SVM on 13 labeled images.
+2016-12-02 03:21:26-0500 [-] Received FRAME message of length 5661.
+2016-12-02 03:21:26-0500 [-] ---Face Detection   0.129554986954 seconds ---
+2016-12-02 03:21:26-0500 [-] ---Face Align  0.00299501419067 seconds ---
+2016-12-02 03:21:27-0500 [-] Received FRAME message of length 5665.
+2016-12-02 03:21:27-0500 [-] ---Face Detection   0.126153230667 seconds ---
+2016-12-02 03:21:27-0500 [-] ---Face Align  0.00298190116882 seconds ---
+2016-12-02 03:21:27-0500 [-] ---Reconocimiento en  0.0556828975677 seconds ---
+2016-12-02 03:21:27-0500 [-] Received FRAME message of length 5657.
+2016-12-02 03:21:27-0500 [-] ---Face Detection   0.127851963043 seconds ---
+2016-12-02 03:21:27-0500 [-] ---Face Align  0.00313401222229 seconds ---
+2016-12-02 03:21:27-0500 [-] ---Reconocimiento en  0.0489449501038 seconds ---
+2016-12-02 03:21:28-0500 [-] Received FRAME message of length 5649.
+2016-12-02 03:21:28-0500 [-] ---Face Detection   0.133904218674 seconds ---
+2016-12-02 03:21:28-0500 [-] ---Face Align  0.00324892997742 seconds ---
+2016-12-02 03:21:28-0500 [-] ---Reconocimiento en  0.0565569400787 seconds ---
+2016-12-02 03:21:28-0500 [-] Received FRAME message of length 5661.
+2016-12-02 03:21:28-0500 [-] ---Face Detection   0.12393283844 seconds ---
+2016-12-02 03:21:28-0500 [-] ---Face Align  0.00301504135132 seconds ---
+2016-12-02 03:21:28-0500 [-] ---Reconocimiento en  0.0554180145264 seconds ---
+2016-12-02 03:21:29-0500 [-] Received FRAME message of length 5653.
+2016-12-02 03:21:29-0500 [-] ---Face Detection   0.135338783264 seconds ---
+2016-12-02 03:21:29-0500 [-] ---Face Align  0.00347900390625 seconds ---
+2016-12-02 03:21:29-0500 [-] ---Reconocimiento en  0.0450220108032 seconds ---
+2016-12-02 03:21:29-0500 [-] Received FRAME message of length 5621.
+2016-12-02 03:21:29-0500 [-] ---Face Detection   0.127831935883 seconds ---
+2016-12-02 03:21:29-0500 [-] ---Face Align  0.00327086448669 seconds ---
+2016-12-02 03:21:29-0500 [-] ---Reconocimiento en  0.0448949337006 seconds ---
+2016-12-02 03:21:30-0500 [-] Received FRAME message of length 5685.
+2016-12-02 03:21:30-0500 [-] ---Face Detection   0.123862981796 seconds ---
+2016-12-02 03:21:30-0500 [-] ---Face Align  0.00305199623108 seconds ---
+2016-12-02 03:21:30-0500 [-] ---Reconocimiento en  0.0452129840851 seconds ---
+2016-12-02 03:21:30-0500 [-] Received FRAME message of length 5673.
+2016-12-02 03:21:30-0500 [-] ---Face Detection   0.124334096909 seconds ---
+2016-12-02 03:21:30-0500 [-] ---Face Align  0.00314903259277 seconds ---
+2016-12-02 03:21:30-0500 [-] ---Reconocimiento en  0.0473301410675 seconds ---
+2016-12-02 03:21:31-0500 [-] Received FRAME message of length 5681.
+2016-12-02 03:21:31-0500 [-] ---Face Detection   0.128679990768 seconds ---
+2016-12-02 03:21:31-0500 [-] ---Face Align  0.00305604934692 seconds ---
+2016-12-02 03:21:31-0500 [-] ---Reconocimiento en  0.0514309406281 seconds ---
+2016-12-02 03:21:31-0500 [-] Received FRAME message of length 5705.
+2016-12-02 03:21:31-0500 [-] ---Face Detection   0.129127979279 seconds ---
+2016-12-02 03:21:31-0500 [-] ---Face Align  0.00307488441467 seconds ---
+2016-12-02 03:21:31-0500 [-] ---Reconocimiento en  0.0496459007263 seconds ---
+2016-12-02 03:21:32-0500 [-] Received FRAME message of length 5653.
+2016-12-02 03:21:32-0500 [-] ---Face Detection   0.125015974045 seconds ---
+2016-12-02 03:21:32-0500 [-] ---Face Align  0.00295186042786 seconds ---
+2016-12-02 03:21:32-0500 [-] ---Reconocimiento en  0.0540509223938 seconds ---
+2016-12-02 03:21:32-0500 [-] Received FRAME message of length 5613.
+2016-12-02 03:21:33-0500 [-] ---Face Detection   0.126749992371 seconds ---
+2016-12-02 03:21:33-0500 [-] ---Face Align  0.0029878616333 seconds ---
+2016-12-02 03:21:33-0500 [-] ---Reconocimiento en  0.0536880493164 seconds ---
+2016-12-02 03:21:33-0500 [-] Received FRAME message of length 5425.
+2016-12-02 03:21:33-0500 [-] ---Face Detection   0.126394033432 seconds ---
+2016-12-02 03:21:33-0500 [-] ---Face Align  0.00332522392273 seconds ---
+2016-12-02 03:21:33-0500 [-] ---Reconocimiento en  0.0463578701019 seconds ---
+2016-12-02 03:21:33-0500 [-] Received FRAME message of length 5149.
+2016-12-02 03:21:34-0500 [-] ---Face Detection   0.127794027328 seconds ---
+2016-12-02 03:21:34-0500 [-] ---Face Align  0.00319600105286 seconds ---
+2016-12-02 03:21:34-0500 [-] ---Reconocimiento en  0.0524520874023 seconds ---
+2016-12-02 03:21:34-0500 [OpenFaceServerProtocol,0,192.168.1.38] Received SIGTERM, shutting down.
+2016-12-02 03:21:34-0500 [-] WebSocket connection closed: connection was closed uncleanly (peer dropped the TCP connection without previous WebSocket closing handshake)
+2016-12-02 03:21:34-0500 [autobahn.twisted.websocket.WebSocketServerFactory] (TCP Port 9000 Closed)
+2016-12-02 03:21:34-0500 [autobahn.twisted.websocket.WebSocketServerFactory] Stopping factory <autobahn.twisted.websocket.WebSocketServerFactory object at 0x7fa85c97e4d0>
+2016-12-02 03:21:34-0500 [-] Main loop terminated.
