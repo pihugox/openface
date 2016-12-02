@@ -270,11 +270,13 @@ class OpenFaceServerProtocol(WebSocketServerProtocol):
         identities = []
         # bbs = align.getAllFaceBoundingBoxes(rgbFrame)
         bb = align.getLargestFaceBoundingBox(rgbFrame)
+        print("---Face Detection   %s seconds ---" % (time.time() - start_time))
         bbs = [bb] if bb is not None else []
         for bb in bbs:
             # print(len(bbs))
-
+            start_time2 = time.time()
             landmarks = align.findLandmarks(rgbFrame, bb)
+            print("---Face Align  %s seconds ---" % (time.time() - start_time2))
             alignedFace = align.align(args.imgDim, rgbFrame, bb,
                                       landmarks=landmarks,
                                       landmarkIndices=openface.AlignDlib.OUTER_EYES_AND_NOSE)
@@ -285,6 +287,7 @@ class OpenFaceServerProtocol(WebSocketServerProtocol):
             if phash in self.images:
                 identity = self.images[phash].identity
             else:
+                start_time3 = time.time()
                 rep = net.forward(alignedFace)
                 # print(rep)
                 if self.training:
@@ -313,6 +316,7 @@ class OpenFaceServerProtocol(WebSocketServerProtocol):
                         identity = -1
                     if identity not in identities:
                         identities.append(identity)
+                print("---Reconocimiento en  %s seconds ---" % (time.time() - start_time3))
 
             if not self.training:
                 bl = (bb.left(), bb.bottom())
@@ -356,9 +360,6 @@ class OpenFaceServerProtocol(WebSocketServerProtocol):
             }
             plt.close()
             self.sendMessage(json.dumps(msg))
-
-        end_time = time.time()
-        print("---Reconocimiento en  %s seconds ---" % (end_time - start_time))
 
 if __name__ == '__main__':
     log.startLogging(sys.stdout)
